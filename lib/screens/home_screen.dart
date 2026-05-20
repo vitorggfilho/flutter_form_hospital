@@ -70,11 +70,11 @@ class _HomeScreenState extends State<HomeScreen> {
       MaterialPageRoute(
         builder: (context) => PacienteFormScreen(
           paciente: paciente,
-          onSalvar: (p) => p, // placeholder, vamos usar o retorno do pop
+          onSalvar: (p) => p,
         ),
       ),
     );
-    // Quando o formulário retornar um paciente (salvo ou editado)
+
     if (pacienteSalvo != null) {
       setState(() {}); // Força rebuild do FutureBuilder
       bool sucesso;
@@ -105,10 +105,10 @@ class _HomeScreenState extends State<HomeScreen> {
           TextButton(onPressed: () => Navigator.pop(context), child: Text('Cancelar')),
           TextButton(
             onPressed: () async {
-              Navigator.pop(context); // fecha o dialog
+              Navigator.pop(context);
               bool sucesso = await _controle.excluir(paciente.id);
               if (sucesso) {
-                setState(() {}); // recarrega a lista
+                setState(() {}); //
                 ScaffoldMessenger.of(context).showSnackBar(
                   SnackBar(content: Text('Paciente excluído')),
                 );

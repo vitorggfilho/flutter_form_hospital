@@ -1,11 +1,8 @@
-// models/enums.dart
 enum GravidadePaciente { leve, moderado, grave }
 enum OperacaoCadastro { inclusao, edicao, selecao }
 
-// Nomes das gravidades para exibição
 const nomesGravidades = ['Leve', 'Moderado', 'Grave'];
 
-// Mapeamento entre enum e string
 extension GravidadeExtension on GravidadePaciente {
   String get nome {
     switch (this) {

@@ -19,7 +19,6 @@ class Paciente {
     required this.gravidade,
   });
 
-  // Construtor a partir de um Map (JSON)
   Paciente.fromMap(Map<String, dynamic> map)
       : id = map[DicionarioDados.id],
         nome = map[DicionarioDados.nome],
@@ -29,7 +28,6 @@ class Paciente {
         dataInternacao = map[DicionarioDados.dataInternacao],
         gravidade = map[DicionarioDados.gravidade];
 
-  // Converte o objeto para Map (para salvar em JSON)
   Map<String, dynamic> toMap() {
     return {
       DicionarioDados.id: id,
