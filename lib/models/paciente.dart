@@ -1,5 +1,3 @@
-import '../constants/dicionario_dados.dart';
-
 class Paciente {
   String id;
   String nome;
@@ -18,25 +16,4 @@ class Paciente {
     required this.dataInternacao,
     required this.gravidade,
   });
-
-  Paciente.fromMap(Map<String, dynamic> map)
-      : id = map[DicionarioDados.id],
-        nome = map[DicionarioDados.nome],
-        idade = map[DicionarioDados.idade],
-        diagnostico = map[DicionarioDados.diagnostico],
-        telefone = map[DicionarioDados.telefone],
-        dataInternacao = map[DicionarioDados.dataInternacao],
-        gravidade = map[DicionarioDados.gravidade];
-
-  Map<String, dynamic> toMap() {
-    return {
-      DicionarioDados.id: id,
-      DicionarioDados.nome: nome,
-      DicionarioDados.idade: idade,
-      DicionarioDados.diagnostico: diagnostico,
-      DicionarioDados.telefone: telefone,
-      DicionarioDados.dataInternacao: dataInternacao,
-      DicionarioDados.gravidade: gravidade,
-    };
-  }
 }

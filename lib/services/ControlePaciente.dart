@@ -4,7 +4,6 @@ import 'arquivo.dart';
 import '../constants/dicionario_dados.dart';
 
 class ControlePaciente {
-  final Map<String, Paciente> _pacientes = {};
 
   Future<void> lerPacientes() async {
     String conteudo = await Arquivo.instancia().lerArquivo();
