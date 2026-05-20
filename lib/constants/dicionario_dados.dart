@@ -7,5 +7,5 @@ class DicionarioDados {
   static const dataInternacao = 'data_internacao';
   static const gravidade = 'gravidade';
   static const pacientes = 'pacientes';
-  static const nomeArquivo = 'pacientes.json';  // ou .txt, mas JSON é mais comum
+  static const nomeArquivo = 'pacientes.json';
 }
