@@ -115,7 +115,6 @@ class _PacienteFormScreenState extends State<PacienteFormScreen> {
   void _salvar() {
     if (_formKey.currentState!.validate()) {
       _formKey.currentState!.save();
-
       final paciente = Paciente(
         id: widget.paciente?.id ?? DateTime.now().millisecondsSinceEpoch.toString(),
         nome: _nome,
@@ -125,9 +124,7 @@ class _PacienteFormScreenState extends State<PacienteFormScreen> {
         dataInternacao: _dataInternacao,
         gravidade: _gravidade,
       );
-
-      widget.onSalvar(paciente);
-      Navigator.pop(context);
+      Navigator.pop(context, paciente); // retorna o paciente salvo
     }
   }
 

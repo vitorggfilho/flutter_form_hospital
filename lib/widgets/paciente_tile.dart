@@ -29,7 +29,7 @@ class PacienteTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       margin: EdgeInsets.symmetric(vertical: 4, horizontal: 8),
-      elevation: 2,
+      elevation: 3,
       child: ListTile(
         contentPadding: EdgeInsets.all(12),
         leading: CircleAvatar(
